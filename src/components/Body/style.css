@@ -1,0 +1,7 @@
+.body {
+  margin-top: 70px;
+  color: var(--text-primary);
+  padding: 15px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}

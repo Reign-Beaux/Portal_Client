@@ -1,0 +1,16 @@
+.custom-button {
+  color: var(--text-primary);
+  background-color: var(--background-defaul);
+  padding: 10px 20px;
+  border-color: var(--action-disabled-background);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.custom-button:hover {
+  background-color: var(--action-hover);
+}
+
+.custom-button:active {
+  background-color: var(--action-selected);  
+}

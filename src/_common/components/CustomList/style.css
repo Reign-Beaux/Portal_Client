@@ -1,0 +1,35 @@
+.title-list {
+  background-color: var(--list-background);
+  width: 200px;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: var(--text-primary);
+  border-radius: 4px;
+  user-select: none;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 5px;
+}
+
+.container-list {
+  position: absolute;
+  background-color: var(--list-background);
+  width: 240px;  
+  color: var(--text-primary);
+  max-height: 300px; /* Establece la altura máxima que desees */
+  overflow-y: auto; /* Agrega una barra de desplazamiento vertical cuando sea necesario */
+  margin: 0 5px;
+}
+
+.item-list {
+  padding: 10px 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.item-list:hover {
+  background-color: var(--list-background-hover);
+}

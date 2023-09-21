@@ -1,0 +1,13 @@
+.header {
+  position: fixed; /* Fija la posición del encabezado */
+  top: 0; /* Lo coloca en la parte superior */
+  left: 0;
+  width: calc(100% - 20px); /* Ocupa el ancho completo del viewport */
+  height: 50px;
+  background-color: var(--background-paper); /* Cambia el color de fondo según tu preferencia */
+  padding: 10px; /* Añade un poco de espacio interno */
+  z-index: 1000; /* Asegura que el encabezado esté por encima de otros elementos */  
+  display: flex; /* Utiliza flexbox para distribuir elementos horizontalmente */
+  justify-content: space-between; /* Distribuye elementos a lo largo del espacio disponible */
+  align-items: center; /* Centra verticalmente los elementos en el encabezado */
+}

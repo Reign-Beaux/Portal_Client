@@ -16,7 +16,7 @@ export interface List {
 export interface CustomListProps {
   props: List;
   handleShowList: (id: number) => void;
-  handleDataSelect: (datataSelect: string) => void;
+  handleDataSelect: (id: number, datataSelect: string) => void;
 }
 
 const CustomList: React.FC<CustomListProps> = ({ props, handleShowList, handleDataSelect }) => {
@@ -35,7 +35,7 @@ const CustomList: React.FC<CustomListProps> = ({ props, handleShowList, handleDa
           {props.datas.map((data) => (
             <Fragment key={`fr-${data.id}`}>
               <hr />
-              <div className="item-list" onClick={() => handleDataSelect(data.text)}>
+              <div className="item-list" onClick={() => handleDataSelect(data.id, data.text)}>
                 {data.text}
               </div>
             </Fragment>

@@ -8,7 +8,7 @@ import React, { useEffect, useState } from "react";
 export interface ReferenceSitesProps {}
 
 const ReferenceSites: React.FC<ReferenceSitesProps> = ({}) => {
-  const { setThemeSelected } = useAppContext();
+  const { setIdTheme, setThemeSelected } = useAppContext();
   const { getAll } = useAxios();
   const [referenceSites, setReferenceSites] = useState<List[]>([]);
 
@@ -28,13 +28,14 @@ const ReferenceSites: React.FC<ReferenceSitesProps> = ({}) => {
     setReferenceSites([...newValue]);
   };
 
-  const handleDataSelect = (dataSelect: string) => {
+  const handleDataSelect = (id: number, dataSelect: string) => {
     setThemeSelected(dataSelect);
     let newValue = [...referenceSites];
     newValue.forEach((value) => {
       value.isExpanded = false;
     });
 
+    setIdTheme(id);
     setReferenceSites([...newValue]);
   };
 

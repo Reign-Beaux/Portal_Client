@@ -2,15 +2,15 @@
   color: var(--text-primary);
   background-color: var(--background-defaul);
   padding: 10px 20px;
-  border-color: var(--action-disabled-background);
+  border-color: var(--button-border);
   cursor: pointer;
   border-radius: 4px;
 }
 
 .custom-button:hover {
-  background-color: var(--action-hover);
+  background-color: var(--button-hover);
 }
 
 .custom-button:active {
-  background-color: var(--action-selected);  
+  background-color: var(--button-active);
 }

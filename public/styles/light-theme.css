@@ -1,0 +1,18 @@
+:root {
+  --text-primary: #000;
+
+  --button-hover: rgba(0, 0, 0, 0.08);
+  --button-active: rgba(0, 0, 0, 0.16);
+  --button-border: rgba(0, 0, 0, 0.12);
+
+  --background-default: hsl(0, 0%, 90%);
+
+  --background-paper: hsl(0, 0%, 55%);
+  --background-paper-shadow: hsl(0, 0%, 80%);
+  --background-paper-hover: hsl(0, 0%, 75%);
+
+  --list-background: hsl(0, 0%, 80%);
+  --list-background-hover: hsl(0, 0%, 80%);
+
+  --divider: #0000001f;
+}

@@ -1,26 +1,3 @@
-:root {
-  --text-primary: #fff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --text-disabled: rgba(255, 255, 255, 0.5);
-  
-  --action-active: #fff;
-  --action-hover: rgba(255, 255, 255, 0.08);
-  --action-selected: rgba(255, 255, 255, 0.16);
-  --action-disabled: rgba(255, 255, 255, 0.3);
-  --action-disabled-background: rgba(255, 255, 255, 0.12);
-
-  --background-default: hsl(0, 0%, 7%);
-
-  --background-paper: hsl(0, 0%, 17%);
-  --background-paper-shadow: hsl(0, 0%, 40%);
-  --background-paper-hover: hsl(0, 0%, 60%);
-
-  --list-background: hsl(0, 0%, 25%);
-  --list-background-hover: hsl(0, 0%, 35%);
-
-  --divider: #ffffff1f;
-}
-
 body {
   margin: 0px;
   background-color: var(--background-default);

@@ -1,0 +1,13 @@
+.custom-cutton-icon-container {
+  width: 25px;
+  text-align: center;
+}
+
+.custom-button-icon {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: var(--text-primary)
+}

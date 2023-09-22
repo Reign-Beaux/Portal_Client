@@ -1,0 +1,8 @@
+.articles-container {
+  background-color: aqua;
+}
+
+.articles-cards-container {
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+}

@@ -6,7 +6,7 @@ export interface RequestGet {
   endpoint: string;
 }
 
-const useAxios = () => {
+export const useAxios = () => {
   const apiUrl = import.meta.env.VITE_API_URL;
   const [abortController, setAbortController] = useState<AbortController | undefined>(undefined);
 
@@ -57,5 +57,3 @@ const useAxios = () => {
     getById,
   };
 };
-
-export default useAxios;

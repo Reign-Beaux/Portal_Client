@@ -30,12 +30,15 @@ const ReferenceSites: React.FC<ReferenceSitesProps> = ({}) => {
 
   const handleDataSelect = (id: number, dataSelect: string) => {
     setThemeSelected(dataSelect);
+    setIdTheme(id);
+    handleBlur();
+  };
+
+  const handleBlur = () => {
     let newValue = [...referenceSites];
     newValue.forEach((value) => {
       value.isExpanded = false;
     });
-
-    setIdTheme(id);
     setReferenceSites([...newValue]);
   };
 
@@ -51,6 +54,7 @@ const ReferenceSites: React.FC<ReferenceSitesProps> = ({}) => {
           props={site}
           handleShowList={handleShowList}
           handleDataSelect={handleDataSelect}
+          handleBlur={handleBlur}
         />
       ))}
     </div>

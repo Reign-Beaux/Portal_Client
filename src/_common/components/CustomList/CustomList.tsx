@@ -17,11 +17,13 @@ export interface CustomListProps {
   props: List;
   handleShowList: (id: number) => void;
   handleDataSelect: (id: number, datataSelect: string) => void;
+  handleBlur: () => void;
+
 }
 
-const CustomList: React.FC<CustomListProps> = ({ props, handleShowList, handleDataSelect }) => {
+const CustomList: React.FC<CustomListProps> = ({ props, handleShowList, handleDataSelect, handleBlur }) => {
   return (
-    <div>
+    <div tabIndex={0} onBlur={handleBlur}>
       <div className="title-list" onClick={() => handleShowList(props.id)}>
         {props.text}
         {props.isExpanded ? (

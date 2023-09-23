@@ -8,7 +8,7 @@ import "./style.css";
 export interface ArticlesProps {}
 
 const Articles: React.FC<ArticlesProps> = ({}) => {
-  const { themeSelected, idTheme } = useAppContext();
+  const { themeSelected, idTheme, setIsOpenDialog } = useAppContext();
   const { getAll } = useAxios();
   const [articles, setArticles] = useState<Article[]>([]);
 
@@ -21,6 +21,8 @@ const Articles: React.FC<ArticlesProps> = ({}) => {
     setArticles(response);
   };
 
+  const handleCardClick = () => setIsOpenDialog(true);
+
   useEffect(() => {
     getArticles();
   }, [idTheme]);
@@ -32,7 +34,11 @@ const Articles: React.FC<ArticlesProps> = ({}) => {
       </div>
       <div className="articles-cards-container">
         {articles.length > 0 ? (
-          articles.map((article) => <CustomCard key={article.id}>{article.title}</CustomCard>)
+          articles.map((article) => (
+            <CustomCard key={article.id} onClick={handleCardClick}>
+              {article.title}
+            </CustomCard>
+          ))
         ) : (
           <h3> Sin artículos cargados </h3>
         )}

@@ -1,7 +1,8 @@
+import { CustomDialog } from "common/components";
+import { Theme } from "common/static";
 import { useEffect } from "react";
 import { Body, Header } from "./components";
 import { useAppContext } from "./context";
-import { Theme } from "common/static";
 
 function App() {
   const { isDarkTheme } = useAppContext();
@@ -21,6 +22,7 @@ function App() {
     <>
       <Header />
       <Body />
+      <CustomDialog />
     </>
   );
 }

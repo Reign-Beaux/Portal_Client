@@ -1,0 +1,11 @@
+.custom-dialog {
+  position: fixed; /* Fija la posición del diálogo en la ventana del navegador. */
+  top: 50%; /* Coloca el diálogo en el centro vertical de la ventana. */
+  left: 50%; /* Coloca el diálogo en el centro horizontal de la ventana. */
+  transform: translate(-50%, -50%); /* Ajusta el centro del diálogo correctamente. */
+  z-index: 1000; /* Asegura que el modal esté por encima de otros elementos. */
+  background-color: #fff; /* Establece el color de fondo del diálogo como blanco. */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra alrededor del diálogo para resaltarlo. */
+  padding: 20px; /* Agrega espacio interno dentro del diálogo. */
+  width: 400px; /* Establece el ancho del diálogo, puedes ajustarlo según tus necesidades. */
+}

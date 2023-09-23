@@ -1,4 +1,3 @@
-import { CustomDialog } from "common/components";
 import { Theme } from "common/static";
 import { useEffect } from "react";
 import { Body, Header } from "./components";
@@ -22,7 +21,6 @@ function App() {
     <>
       <Header />
       <Body />
-      <CustomDialog />
     </>
   );
 }

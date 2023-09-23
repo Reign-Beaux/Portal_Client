@@ -1,10 +1,9 @@
-import React from 'react';
+import React from "react";
 
-export interface CustomDialogBodyProps {
-}
+export interface CustomDialogBodyProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-const CustomDialogBody: React.FC<CustomDialogBodyProps>  = ({}) => {
-	return <div>CustomDialogBody</div>;
+const CustomDialogBody: React.FC<CustomDialogBodyProps> = ({ children, ...rest }) => {
+  return <div {...rest}>{children}</div>;
 };
 
 export default CustomDialogBody;

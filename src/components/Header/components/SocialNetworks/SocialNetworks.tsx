@@ -12,10 +12,10 @@ const SocialNetworks: React.FC<SocialNetworksProps> = ({}) => {
 
   return (
     <div style={{display: "flex", flexDirection: "row"}}>
-      <CustomLink href={Url.YOUTUBE}>
+      <CustomLink href={Url.YOUTUBE} decoration="none">
         <i className="fa-brands fa-youtube"></i>
       </CustomLink>
-      <CustomLink href={Url.LINKEDIN}>
+      <CustomLink href={Url.LINKEDIN} decoration="none">
         <i className="fa-brands fa-linkedin-in"></i>
       </CustomLink>
       <CustomButtonIcon onClick={handleChangeTheme}>

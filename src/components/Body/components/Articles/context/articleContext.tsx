@@ -1,3 +1,4 @@
+import { Article, articleEmpty } from "common/models";
 import { Context, FC, ReactNode, createContext, useContext, useState } from "react";
 
 type ContextProviderProps = {
@@ -7,14 +8,14 @@ type ContextProviderProps = {
 type ContextProps = {
   isOpenDialog: boolean;
   setIsOpenDialog: Function;
-  articleSelected: string;
-  setArticleSelected: Function;
+  articleSelected: Article;
+  setArticleSelected: React.Dispatch<React.SetStateAction<Article>>;
 };
 
 const ContextEmptyState: ContextProps = {
   isOpenDialog: false,
   setIsOpenDialog: () => {},
-  articleSelected: "",
+  articleSelected: articleEmpty,
   setArticleSelected: () => {},
 };
 
@@ -22,7 +23,7 @@ const ArticleContext: Context<ContextProps> = createContext(ContextEmptyState);
 
 export const ArticleProvider: FC<ContextProviderProps> = ({ children }) => {
   const [isOpenDialog, setIsOpenDialog] = useState(false);
-  const [articleSelected, setArticleSelected] = useState("");
+  const [articleSelected, setArticleSelected] = useState(articleEmpty);
 
   return (
     <ArticleContext.Provider

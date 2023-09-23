@@ -1,8 +1,9 @@
 export interface Article {
-  id: number;  
+  id: number;
   themeId: number;
   title: string;
   body: string;
+  url: string;
 }
 
 export const articleEmpty: Article = {
@@ -10,4 +11,5 @@ export const articleEmpty: Article = {
   themeId: 0,
   title: "",
   body: "",
+  url: "",
 };

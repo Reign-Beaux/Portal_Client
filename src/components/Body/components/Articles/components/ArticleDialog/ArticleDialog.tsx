@@ -1,5 +1,5 @@
-import { CustomButtonIcon, CustomDialog } from "common/components";
-import { CustomDialogTitle } from "dialog/components";
+import { CustomButtonIcon, CustomDialog, CustomLink } from "common/components";
+import { CustomDialogBody, CustomDialogTitle } from "dialog/components";
 import React from "react";
 import { useArticleContext } from "../../context";
 
@@ -11,11 +11,19 @@ const ArticleDialog: React.FC<ArticleDialogProps> = ({}) => {
   return (
     <CustomDialog open={isOpenDialog}>
       <CustomDialogTitle>
-        <h3>{articleSelected}</h3>
+        <h3>{articleSelected.title}</h3>
         <CustomButtonIcon onClick={() => setIsOpenDialog(false)}>
           <i className="fa-solid fa-xmark"></i>
         </CustomButtonIcon>
-      </CustomDialogTitle>			
+      </CustomDialogTitle>
+      <CustomDialogBody>
+        {articleSelected.body}
+        <br />
+        <br />
+        <div style={{ textAlign: "end" }}>
+          <CustomLink href={articleSelected.url}>Artículo de origen</CustomLink>
+        </div>
+      </CustomDialogBody>
     </CustomDialog>
   );
 };

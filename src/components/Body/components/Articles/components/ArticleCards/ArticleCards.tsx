@@ -23,8 +23,8 @@ const ArticleCards: React.FC<ArticleCardsProps> = ({}) => {
     setArticles(response);
   };
 
-  const handleCardClick = (title: string) => () => {
-    setArticleSelected(title);
+  const handleCardClick = (article: Article) => () => {
+    setArticleSelected({ ...article });
     setIsOpenDialog(true);
   };
 
@@ -36,7 +36,7 @@ const ArticleCards: React.FC<ArticleCardsProps> = ({}) => {
     <div className="articles-cards-container">
       {articles.length > 0 ? (
         articles.map((article) => (
-          <CustomCard key={article.id} onClick={handleCardClick(article.title)}>
+          <CustomCard key={article.id} onClick={handleCardClick(article)}>
             {article.title}
           </CustomCard>
         ))

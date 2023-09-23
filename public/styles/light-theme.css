@@ -8,8 +8,8 @@
   --background-default: hsl(0, 0%, 90%);
 
   --background-paper: hsl(0, 0%, 55%);
-  --background-paper-shadow: hsl(0, 0%, 80%);
-  --background-paper-hover: hsl(0, 0%, 75%);
+  --background-paper-shadow: hsl(0, 0%, 40%);
+  --background-paper-hover: hsl(0, 0%, 0%);
 
   --list-background: hsl(0, 0%, 80%);
   --list-background-hover: hsl(0, 0%, 70%);

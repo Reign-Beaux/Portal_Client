@@ -1,0 +1,5 @@
+.custom-dialog-title {  
+  display: flex; /* Utiliza flexbox para distribuir elementos horizontalmente */
+  justify-content: space-between; /* Distribuye elementos a lo largo del espacio disponible */
+  align-items: center; /* Centra verticalmente los elementos en el encabezado */
+}

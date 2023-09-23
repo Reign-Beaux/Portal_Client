@@ -7,23 +7,30 @@ type ContextProviderProps = {
 type ContextProps = {
   isOpenDialog: boolean;
   setIsOpenDialog: Function;
+  articleSelected: string;
+  setArticleSelected: Function;
 };
 
 const ContextEmptyState: ContextProps = {
   isOpenDialog: false,
   setIsOpenDialog: () => {},
+  articleSelected: "",
+  setArticleSelected: () => {},
 };
 
 const ArticleContext: Context<ContextProps> = createContext(ContextEmptyState);
 
 export const ArticleProvider: FC<ContextProviderProps> = ({ children }) => {
   const [isOpenDialog, setIsOpenDialog] = useState(false);
+  const [articleSelected, setArticleSelected] = useState("");
 
   return (
     <ArticleContext.Provider
       value={{
         isOpenDialog,
         setIsOpenDialog,
+        articleSelected,
+        setArticleSelected,
       }}>
       {children}
     </ArticleContext.Provider>

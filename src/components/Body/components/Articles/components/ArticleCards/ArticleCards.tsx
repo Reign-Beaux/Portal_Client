@@ -9,7 +9,7 @@ export interface ArticleCardsProps {}
 
 const ArticleCards: React.FC<ArticleCardsProps> = ({}) => {
   const { idTheme } = useAppContext();
-  const { setIsOpenDialog } = useArticleContext();
+  const { setIsOpenDialog, setArticleSelected } = useArticleContext();
   const { getAll } = useAxios();
   const [articles, setArticles] = useState<Article[]>([]);
 
@@ -22,7 +22,10 @@ const ArticleCards: React.FC<ArticleCardsProps> = ({}) => {
     setArticles(response);
   };
 
-  const handleCardClick = () => setIsOpenDialog(true);
+  const handleCardClick = (title: string) => () => {
+    setArticleSelected(title);
+    setIsOpenDialog(true);
+  };
 
   useEffect(() => {
     getArticles();
@@ -32,7 +35,7 @@ const ArticleCards: React.FC<ArticleCardsProps> = ({}) => {
     <div className="articles-cards-container">
       {articles.length > 0 ? (
         articles.map((article) => (
-          <CustomCard key={article.id} onClick={handleCardClick}>
+          <CustomCard key={article.id} onClick={handleCardClick(article.title)}>
             {article.title}
           </CustomCard>
         ))

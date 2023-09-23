@@ -7,6 +7,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: [
+      { find: 'dialog', replacement: path.resolve(__dirname, 'src/_common/components/CustomDialog') },
       { find: 'common', replacement: path.resolve(__dirname, 'src/_common') },
       { find: 'libraries', replacement: path.resolve(__dirname, 'src/_libraries-config') },
       { find: 'pages', replacement: path.resolve(__dirname, 'src/_pages') },

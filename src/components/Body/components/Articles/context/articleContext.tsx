@@ -30,4 +30,10 @@ export const ArticleProvider: FC<ContextProviderProps> = ({ children }) => {
   );
 };
 
-export const useArticleContext = () => useContext(ArticleContext);
+export const useArticleContext = () => {
+  const context = useContext(ArticleContext);
+
+  if (!context) throw Error("This component is not found inside ArticleContext");
+
+  return context;
+}

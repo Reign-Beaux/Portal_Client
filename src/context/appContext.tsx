@@ -11,8 +11,6 @@ type ContextProps = {
   setIdTheme: Function;
   isDarkTheme: boolean;
   setIsDarkTheme: Function;
-  isOpenDialog: boolean;
-  setIsOpenDialog: Function;
 };
 
 const ContextEmptyState: ContextProps = {
@@ -22,8 +20,6 @@ const ContextEmptyState: ContextProps = {
   setIdTheme: () => {},
   isDarkTheme: false,
   setIsDarkTheme: () => {},
-  isOpenDialog: false,
-  setIsOpenDialog: () => {},
 };
 
 const AppContext: Context<ContextProps> = createContext(ContextEmptyState);
@@ -32,7 +28,6 @@ export const AppProvider: FC<ContextProviderProps> = ({ children }) => {
   const [themeSelected, setThemeSelected] = useState("");
   const [idTheme, setIdTheme] = useState(0);
   const [isDarkTheme, setIsDarkTheme] = useState(localStorage.getItem("isDarkTheme") === "true");
-  const [isOpenDialog, setIsOpenDialog] = useState(false);
 
   const changeTheme = (value: boolean) => {
     localStorage.setItem("isDarkTheme", value.toString());
@@ -44,12 +39,10 @@ export const AppProvider: FC<ContextProviderProps> = ({ children }) => {
       value={{
         themeSelected,
         setThemeSelected,
-        isDarkTheme,
         idTheme,
         setIdTheme,
+        isDarkTheme,
         setIsDarkTheme: changeTheme,
-        isOpenDialog,
-        setIsOpenDialog,
       }}>
       {children}
     </AppContext.Provider>

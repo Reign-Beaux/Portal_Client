@@ -4,6 +4,7 @@ import { Article } from "common/models";
 import { RequestGet, useAxios } from "libraries/axios";
 import React, { useEffect, useState } from "react";
 import { useArticleContext } from "../../context";
+import "./style.css";
 
 export interface ArticleCardsProps {}
 

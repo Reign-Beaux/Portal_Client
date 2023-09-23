@@ -1,7 +1,6 @@
 import { useAppContext } from "@/context";
 import React from "react";
 import { ArticleCards, ArticleDialog } from "./components";
-import "./style.css";
 import { ArticleProvider } from "./context";
 
 export interface ArticlesProps {}

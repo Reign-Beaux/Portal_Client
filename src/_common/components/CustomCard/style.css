@@ -8,6 +8,7 @@
   cursor: pointer;
   box-shadow: 0 0 10px 0 var(--background-paper-shadow);
   margin: 10px 10px;
+  user-select: none;
 }
 
 .custom-card:hover {

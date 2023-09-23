@@ -3,11 +3,13 @@ import { CustomCard } from "common/components";
 import { Article } from "common/models";
 import { RequestGet, useAxios } from "libraries/axios";
 import React, { useEffect, useState } from "react";
+import { useArticleContext } from "../../context";
 
 export interface ArticleCardsProps {}
 
 const ArticleCards: React.FC<ArticleCardsProps> = ({}) => {
-  const { idTheme, setIsOpenDialog } = useAppContext();
+  const { idTheme } = useAppContext();
+  const { setIsOpenDialog } = useArticleContext();
   const { getAll } = useAxios();
   const [articles, setArticles] = useState<Article[]>([]);
 

@@ -1,10 +1,13 @@
-import React from 'react';
+import React from "react";
 
-export interface CustomDialogFooterProps {
-}
+export interface CustomDialogFooterProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-const CustomDialogFooter: React.FC<CustomDialogFooterProps>  = ({}) => {
-	return <div>CustomDialogFooter</div>;
+const CustomDialogFooter: React.FC<CustomDialogFooterProps> = ({ children, ...rest }) => {
+  return (
+    <div style={{ textAlign: "end", marginTop: "15px" }} {...rest}>
+      {children}
+    </div>
+  );
 };
 
 export default CustomDialogFooter;

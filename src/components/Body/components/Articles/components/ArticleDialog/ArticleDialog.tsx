@@ -1,5 +1,5 @@
 import { CustomButtonIcon, CustomDialog, CustomLink } from "common/components";
-import { CustomDialogBody, CustomDialogTitle } from "dialog/components";
+import { CustomDialogBody, CustomDialogFooter, CustomDialogTitle } from "dialog/components";
 import React from "react";
 import { useArticleContext } from "../../context";
 
@@ -18,12 +18,10 @@ const ArticleDialog: React.FC<ArticleDialogProps> = ({}) => {
       </CustomDialogTitle>
       <CustomDialogBody>
         {articleSelected.body}
-        <br />
-        <br />
-        <div style={{ textAlign: "end" }}>
-          <CustomLink href={articleSelected.url}>Artículo de origen</CustomLink>
-        </div>
       </CustomDialogBody>
+      <CustomDialogFooter>
+        <CustomLink href={articleSelected.url}>Artículo de origen</CustomLink>
+      </CustomDialogFooter>
     </CustomDialog>
   );
 };

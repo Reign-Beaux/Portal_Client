@@ -7,7 +7,16 @@ export interface CustomDialogProps {
 }
 
 const CustomDialog: React.FC<CustomDialogProps> = ({ children, open }) => {
-  return <>{open && <div className="custom-dialog">{children}</div>}</>;
+  return (
+    <>
+      {open && (
+        <>
+          <div className="modal-backdrop"></div>
+          <div className="custom-dialog">{children}</div>
+        </>
+      )}
+    </>
+  );
 };
 
 export default CustomDialog;

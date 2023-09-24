@@ -6,6 +6,7 @@
   --button-border: rgba(0, 0, 0, 0.12);
 
   --background-default: hsl(0, 0%, 90%);
+  --background-disabled: rgba(50, 50, 50, 0.3);
 
   --background-paper: hsl(0, 0%, 55%);
   --background-paper-shadow: hsl(0, 0%, 40%);
